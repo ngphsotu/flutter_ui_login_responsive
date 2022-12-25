@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'screens/home_screen.dart';
+import 'pallete.dart';
+import 'screens/login_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -10,9 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Login Responsive',
-      theme: ThemeData(primarySwatch: Colors.teal),
-      home: const HomeScreen(),
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter login responsive',
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: Pallete.backgroundColor,
+      ),
+      home: const LoginScreen(),
     );
   }
 }
